@@ -1,5 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import faker from "faker";
 import BirthdayReminder from "./BirthdayReminder";
 
-ReactDOM.render(<BirthdayReminder />, document.getElementById("root"));
+const App = () => {
+  return <BirthdayReminder img={faker.image.avatar()} />;
+};
+
+ReactDOM.render(<App />, document.getElementById("root"));
