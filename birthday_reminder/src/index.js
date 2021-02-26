@@ -1,43 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import faker from "faker";
 import BirthdayReminder from "./BirthdayReminder";
+import data from "./data";
+import "./index.css";
 
 const App = () => {
+  const [people, setPeople] = useState(data);
   return (
-    <div
-      style={{
-        position: "absolute",
-        left: "50%",
-        top: "50%",
-        transform: "translate(-50%, -50%)",
-      }}
-    >
-      <BirthdayReminder
-        img={faker.image.image()}
-        fName={faker.name.firstName()}
-        lName={faker.name.lastName()}
-      />
-      <BirthdayReminder
-        img={faker.image.image()}
-        fName={faker.name.firstName()}
-        lName={faker.name.lastName()}
-      />
-      <BirthdayReminder
-        img={faker.image.image()}
-        fName={faker.name.firstName()}
-        lName={faker.name.lastName()}
-      />
-      <BirthdayReminder
-        img={faker.image.image()}
-        fName={faker.name.firstName()}
-        lName={faker.name.lastName()}
-      />
-      <BirthdayReminder
-        img={faker.image.image()}
-        fName={faker.name.firstName()}
-        lName={faker.name.lastName()}
-      />
+    <div className="wrapper">
+      <BirthdayReminder people={people} />
+      <button className="btn" onClick={() => setPeople([])}>
+        Clear All
+      </button>
     </div>
   );
 };
