@@ -1,0 +1,39 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: rgb(229, 237, 238);
+  line-height: 1.5;
+  font-size: 0.885rem;
+}
+.rows {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 2rem;
+  margin: 3rem auto;
+  text-transform: capitalize;
+}
+
+.rows img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.rows li {
+  width: 85%;
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  text-align: left;
+}
+.rows h4 {
+  margin-bottom: 0.15rem;
+}
+.rows a {
+  color: hsl(210, 22%, 49%);
+  text-transform: capitalize;
+}
