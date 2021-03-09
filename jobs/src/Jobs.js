@@ -1,13 +1,17 @@
 import React from "react";
 import Job from "./Job";
 
-const Jobs = ({ data }) => {
+const Jobs = ({ data, removeItem }) => {
   const renderedData = data.map((job) => {
-    return <Job key={data.id} job={job} />;
+    return (
+      <div>
+        <Job key={job.id} {...job} removeItem={removeItem} />
+      </div>
+    );
   });
   return (
     <section>
-      <div className="title">
+      <div className="main">
         <h2>Our Jobs</h2>
       </div>
       <div>{renderedData}</div>
