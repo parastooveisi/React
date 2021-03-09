@@ -14,10 +14,13 @@ body {
   border-radius: 50%;
 }
 .wrapper {
+  width: 60vw;
+  margin: 5rem 0;
+  max-width: 400px;
   background-color: white;
-  width: 20%;
+  padding: 1.5rem 2rem;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -26,7 +29,6 @@ body {
   width: 70%;
   margin-left: 15%;
   margin-right: 30%;
-  margin-bottom: 1.5rem;
   background-color: rgb(225, 1, 254);
   padding: 0.5rem 0;
   border-radius: 0.25rem;
@@ -45,7 +47,6 @@ body {
   margin-bottom: 1.5rem;
   margin-top: 1.5rem;
   margin-left: 10%;
-
   align-items: center;
 }
 .person img {
