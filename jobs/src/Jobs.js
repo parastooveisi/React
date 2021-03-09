@@ -1,11 +1,17 @@
 import React from "react";
 import Job from "./Job";
 
-const Jobs = () => {
+const Jobs = ({ data }) => {
+  const renderedData = data.map((job) => {
+    return <Job key={data.id} job={job} />;
+  });
   return (
-    <div>
-      <Job />
-    </div>
+    <section>
+      <div className="title">
+        <h2>Our Jobs</h2>
+      </div>
+      <div>{renderedData}</div>
+    </section>
   );
 };
 

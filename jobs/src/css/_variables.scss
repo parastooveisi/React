@@ -1,0 +1,12 @@
+$radius: 0.25rem;
+$colors: (
+  primary-1: hsl(210, 36%, 96%),
+  primary-2: hsl(205, 78%, 60%),
+  primary-3: hsl(209, 61%, 16%) remove-btn: rgb(146, 74, 175),
+);
+$main-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
