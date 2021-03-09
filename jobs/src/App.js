@@ -1,34 +1,16 @@
 import React, { useState } from "react";
 import Jobs from "./Jobs";
-import faker from "faker";
+import data from "./data";
 
 const App = () => {
-  const generator = (schema, min = 1, max) => {
-    max = max || min;
-    return Array.from({ length: faker.random.number({ min, max }) }).map(() =>
-      Object.keys(schema).reduce((entity, key) => {
-        entity[key] = faker.fake(schema[key]);
-        return entity;
-      }, {})
-    );
+  const [jobs, setJobs] = useState(data);
+  const removeItem = (id) => {
+    let newJobs = jobs.filter((item) => item.id !== id);
+    setJobs(newJobs);
   };
-
-  // your schema
-  const clientsSchema = {
-    id: "{{random.number}}",
-    prductName: "{{commerce.productName}}",
-    description: "{{commerce.productDescription}}",
-    price: "{{commerce.price}}",
-    image: "{{image.business}}",
-  };
-
-  // generate random clients between 5 and 20 units, based on client schema defined above
-  const data = generator(clientsSchema, 5, 20);
-
-  console.log(data);
   return (
-    <div>
-      <Jobs data={data} />
+    <div className="main">
+      <Jobs key={data.id} data={jobs} removeItem={removeItem} />
     </div>
   );
 };
