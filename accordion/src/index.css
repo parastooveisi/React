@@ -1,0 +1,13 @@
+body {
+  background-color: #dda0dd;
+}
+.main {
+  width: 90vw;
+  margin: 0 auto;
+  height: auto;
+  max-width: 1170px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
